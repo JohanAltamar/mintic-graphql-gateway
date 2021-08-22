@@ -1,6 +1,6 @@
 const { RESTDataSource } = require('apollo-datasource-rest');
 
-const serverConfig = require('../server');
+const serverConfig = require('../utils/microservices');
 
 class AuthAPI extends RESTDataSource {
     constructor() {
