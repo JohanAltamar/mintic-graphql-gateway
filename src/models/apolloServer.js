@@ -7,6 +7,7 @@ const typeDefs = require('../typeDefs');
 const resolvers = require('../resolvers');
 /* Data Sources */
 const AuthAPI = require('../dataSources/auth_api');
+const UserPersonalInfoAPI = require('../dataSources/userPersonalInfo.data');
 /* Context */
 const authentication = require('../utils/authentication');
 
@@ -19,6 +20,7 @@ class Server {
       resolvers,
       dataSources: () => ({
         authAPI: new AuthAPI(),
+        userPersonalInfoAPI: new UserPersonalInfoAPI(),
       }),
       introspection: true,
       playground: true
