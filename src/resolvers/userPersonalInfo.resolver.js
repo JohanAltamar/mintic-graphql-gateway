@@ -8,6 +8,9 @@ const userPersonalInfoResolver = {
       }
     },
   },
+  Mutation: {
+    
+  }
 };
 
 module.exports = userPersonalInfoResolver;
