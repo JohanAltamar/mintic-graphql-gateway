@@ -18,8 +18,7 @@ const userPersonalInfoTypeDefs = gql`
     getUserPersonalInfo(userId: ID!): UserPersonalInfo
   }
 
-  input UserPersonalInfoInput {
-    id: ID!
+  input UserPersonalInfoInputPost {
     name: String!
     lastname: String!
     city: String
@@ -30,9 +29,22 @@ const userPersonalInfoTypeDefs = gql`
     description: String!
     skills: [String!]
   }
+
+  input UserPersonalInfoInputPut {
+    name: String
+    lastname: String
+    city: String
+    email: String
+    cellphone: String
+    dni: String
+    dob: String
+    description: String
+    skills: [String!]
+  }
+
   type Mutation {
-    setUserPersonalInfo(personalInfo: UserPersonalInfoInput!): UserPersonalInfo
-    updateUserPersonalInfo(personalInfo: UserPersonalInfoInput!): UserPersonalInfo
+    setUserPersonalInfo(personalInfo: UserPersonalInfoInputPost!, userId: ID!): UserPersonalInfo!
+    updateUserPersonalInfo(personalInfo: UserPersonalInfoInputPut!, userId: ID!): UserPersonalInfo!
   }
 `;
 
