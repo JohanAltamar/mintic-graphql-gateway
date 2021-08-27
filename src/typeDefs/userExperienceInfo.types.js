@@ -37,9 +37,9 @@ const userExperienceInfoTypeDefs = gql`
   }
 
   type Mutation {
-    setUserExperienceInfo(experienceInfo: UserExperienceInfoInput! , userId: ID!): Message
-    updateUserExperienceInfo(experienceInfo: UserExperienceInfoInput! , userId: ID! , experienceId: String!): Message
-    deleteUserExperienceInfo(userId: ID! , experienceId: String!): Message
+    setUserExperienceInfo(experienceInfo: UserExperienceInfoInput!, userId: ID!): Message
+    updateUserExperienceInfo(experienceInfo: UserExperienceInfoInput!, userId: ID!, experienceId: String!): Message
+    deleteUserExperienceInfo(userId: ID!, experienceId: String!): Message
   }
 `;
 
