@@ -1,12 +1,14 @@
 const authTypeDefs = require('./auth_type_defs');
-const userPersonalInfoTypeDefs = require('./userPersonalInfo.types');
+const userEducationInfoTypeDefs = require('./userEducationInfo.types');
 const userExperienceInfoTypeDefs = require('./userExperienceInfo.types');
+const userPersonalInfoTypeDefs = require('./userPersonalInfo.types');
 const userProfessionalLinksTypeDefs = require('./userProfessionalLinks.type');
 
 const schemasArrays = [
   authTypeDefs, 
-  userPersonalInfoTypeDefs,
+  userEducationInfoTypeDefs,
   userExperienceInfoTypeDefs,
+  userPersonalInfoTypeDefs,
   userProfessionalLinksTypeDefs,
 ];
 
