@@ -6,10 +6,11 @@ const typeDefs = require('../typeDefs');
 /* Resolvers */
 const resolvers = require('../resolvers');
 /* Data Sources */
-const AuthAPI = require('../dataSources/auth_api');
-const UserPersonalInfoAPI = require('../dataSources/userPersonalInfo.data');
-const UserExperienceAPI = require('../dataSources/userExperienceInfo.data');
+const AuthAPI = require('../dataSources/authentication.data');
 const UserEducationAPI = require('../dataSources/userEducationInfo.data');
+const UserExperienceAPI = require('../dataSources/userExperienceInfo.data');
+const UserPersonalInfoAPI = require('../dataSources/userPersonalInfo.data');
+const UserProfessionalLinksAPI = require('../dataSources/userProfessionalLinks.data');
 /* Context */
 const authentication = require('../utils/authentication');
 
@@ -22,9 +23,10 @@ class Server {
       resolvers,
       dataSources: () => ({
         authAPI: new AuthAPI(),
-        userPersonalInfoAPI: new UserPersonalInfoAPI(),
-        userExperienceAPI: new UserExperienceAPI(),
         userEducationAPI: new UserEducationAPI(),
+        userExperienceAPI: new UserExperienceAPI(),
+        userPersonalInfoAPI: new UserPersonalInfoAPI(),
+        userProfessionalLinksAPI: new UserProfessionalLinksAPI(),
       }),
       introspection: true,
       playground: true

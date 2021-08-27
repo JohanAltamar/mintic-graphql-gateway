@@ -1,13 +1,15 @@
-const authTypeDefs = require('./auth_type_defs');
-const userPersonalInfoTypeDefs = require('./userPersonalInfo.types');
-const userExperienceInfoTypeDefs = require('./userExperienceInfo.types');
+const authTypeDefs = require('./authentication.types');
 const userEducationInfoTypeDefs = require('./userEducationInfo.types');
+const userExperienceInfoTypeDefs = require('./userExperienceInfo.types');
+const userPersonalInfoTypeDefs = require('./userPersonalInfo.types');
+const userProfessionalLinksTypeDefs = require('./userProfessionalLinks.type');
 
 const schemasArrays = [
   authTypeDefs, 
-  userPersonalInfoTypeDefs,
-  userExperienceInfoTypeDefs,
   userEducationInfoTypeDefs,
+  userExperienceInfoTypeDefs,
+  userPersonalInfoTypeDefs,
+  userProfessionalLinksTypeDefs,
 ];
 
 module.exports = schemasArrays; 
