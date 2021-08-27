@@ -16,12 +16,12 @@ const userEducationInfoTypeDefs = gql`
         end_date: String
     }
 
-    type Results {
+    type EducationResults {
         results: [UserEducationInfo]
     }
 
     type Query {
-        getUserEducationInfo(userId: ID!): Results
+        getUserEducationInfo(userId: ID!): EducationResults
     }
 
     input UserEducationInfoInputPOST {
