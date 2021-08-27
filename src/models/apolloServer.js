@@ -9,6 +9,7 @@ const resolvers = require('../resolvers');
 const AuthAPI = require('../dataSources/auth_api');
 const UserPersonalInfoAPI = require('../dataSources/userPersonalInfo.data');
 const UserExperienceAPI = require('../dataSources/userExperienceInfo.data');
+const UserEducationAPI = require('../dataSources/userEducationInfo.data');
 /* Context */
 const authentication = require('../utils/authentication');
 
@@ -23,6 +24,7 @@ class Server {
         authAPI: new AuthAPI(),
         userPersonalInfoAPI: new UserPersonalInfoAPI(),
         userExperienceAPI: new UserExperienceAPI(),
+        userEducationAPI: new UserEducationAPI(),
       }),
       introspection: true,
       playground: true
