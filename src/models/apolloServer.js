@@ -6,7 +6,7 @@ const typeDefs = require('../typeDefs');
 /* Resolvers */
 const resolvers = require('../resolvers');
 /* Data Sources */
-const AuthAPI = require('../dataSources/auth_api');
+const AuthAPI = require('../dataSources/authentication.data');
 const UserEducationAPI = require('../dataSources/userEducationInfo.data');
 const UserExperienceAPI = require('../dataSources/userExperienceInfo.data');
 const UserPersonalInfoAPI = require('../dataSources/userPersonalInfo.data');

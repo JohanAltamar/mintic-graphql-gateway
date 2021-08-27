@@ -1,4 +1,4 @@
-const authResolver = require('./auth_resolver');
+const authResolver = require('./authentication.resolver');
 const userEducationInfoResolver = require ('./userEducationInfo.resolver');
 const userExperienceInfoResolver = require ('./userExperienceInfo.resolver');
 const userPersonalInfoResolver = require('./userPersonalInfo.resolver');

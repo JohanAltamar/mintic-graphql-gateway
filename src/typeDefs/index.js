@@ -1,4 +1,4 @@
-const authTypeDefs = require('./auth_type_defs');
+const authTypeDefs = require('./authentication.types');
 const userEducationInfoTypeDefs = require('./userEducationInfo.types');
 const userExperienceInfoTypeDefs = require('./userExperienceInfo.types');
 const userPersonalInfoTypeDefs = require('./userPersonalInfo.types');
