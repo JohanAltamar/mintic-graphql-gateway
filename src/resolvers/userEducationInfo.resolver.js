@@ -19,6 +19,7 @@
 
         updateUserEducationInfo: (_,{ userId, educationInfo, educationId }, { dataSources, userIdToken }) => {
             if(userId == userIdToken) {
+                console.log(educationInfo);
                 return dataSources.userEducationAPI.updateEducationInfo(userId, educationId, educationInfo );
             } else {
                 return null;

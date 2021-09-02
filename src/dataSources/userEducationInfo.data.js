@@ -17,6 +17,7 @@ class UserEducationAPI extends RESTDataSource {
     }
 
     async updateEducationInfo(userId, educationId, body){
+        console.log(body);
         return await this.put(`/api/v1/education/${userId}/${educationId}`, body)
     }
 
