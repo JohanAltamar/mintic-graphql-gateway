@@ -2,7 +2,8 @@ const userExperienceInfoResolver = {
     Query: {
         getUserExperienceInfo: (_, { userId }, { dataSources, userIdToken }) => {
             if(userIdToken) {
-                return dataSources.userExperienceAPI.getExperienceInfo(userId); 
+                if (userId) return dataSources.userExperienceAPI.getExperienceInfo(userId); 
+                return dataSources.userExperienceAPI.getExperienceInfo(userIdToken); 
             } else {
                 return null;
             }

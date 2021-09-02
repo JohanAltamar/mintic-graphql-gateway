@@ -18,7 +18,7 @@ const userExperienceInfoTypeDefs = gql`
   }
 
   type Query {
-    getUserExperienceInfo(userId: ID!): Results
+    getUserExperienceInfo(userId: ID): Results
   }
 
   input UserExperienceInfoInput {
