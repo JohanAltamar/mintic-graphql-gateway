@@ -2,7 +2,8 @@
     Query: {
         getUserEducationInfo: (_, { userId }, { dataSources, userIdToken }) => {
             if(userIdToken) {
-                return dataSources.userEducationAPI.getEducationInfo(userId); 
+                if (userId) return dataSources.userEducationAPI.getEducationInfo(userId);
+                return dataSources.userEducationAPI.getEducationInfo(userIdToken); 
             } else {
                 return null;
             }

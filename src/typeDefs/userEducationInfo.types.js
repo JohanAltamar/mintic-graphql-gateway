@@ -21,7 +21,7 @@ const userEducationInfoTypeDefs = gql`
     }
 
     type Query {
-        getUserEducationInfo(userId: ID!): EducationResults
+        getUserEducationInfo(userId: ID): EducationResults
     }
 
     input UserEducationInfoInputPOST {
