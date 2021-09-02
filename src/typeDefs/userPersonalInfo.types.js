@@ -15,7 +15,7 @@ const userPersonalInfoTypeDefs = gql`
   }
 
   type Query {
-    getUserPersonalInfo(userId: ID!): UserPersonalInfo
+    getUserPersonalInfo(userId: ID): UserPersonalInfo
   }
 
   input UserPersonalInfoInputPost {

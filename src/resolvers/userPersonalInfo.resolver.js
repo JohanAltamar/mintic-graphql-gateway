@@ -2,7 +2,8 @@ const userPersonalInfoResolver = {
   Query: {
     getUserPersonalInfo: (_, { userId }, { dataSources, userIdToken }) => {
       if(userIdToken) {
-        return dataSources.userPersonalInfoAPI.getUserInfo(userId);
+        if (userId) return dataSources.userPersonalInfoAPI.getUserInfo(userId); 
+        return dataSources.userPersonalInfoAPI.getUserInfo(userIdToken);
       } else {
         return null
       }
