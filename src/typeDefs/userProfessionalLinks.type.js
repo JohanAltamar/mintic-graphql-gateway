@@ -18,7 +18,7 @@ const userProfessionalLinks = gql`
     }
 
     type Query {
-        getAllProfessionalLinks(userId: ID!): LinksResult
+        getAllProfessionalLinks(userId: ID): LinksResult
         getProfessionalLinkById(userId: ID!, linkId: ID!): ProfessionalLink
     }
 

@@ -2,7 +2,8 @@ const userProfessionalLinksResolver = {
     Query: {
         getAllProfessionalLinks: (_, { userId }, { dataSources, userIdToken }) => {
             if(userIdToken) {
-                return dataSources.userProfessionalLinksAPI.getAllLinks(userId);
+                if (userId) return dataSources.userProfessionalLinksAPI.getAllLinks(userId);
+                return dataSources.userProfessionalLinksAPI.getAllLinks(userIdToken);
             } else {
                 return null
             }
